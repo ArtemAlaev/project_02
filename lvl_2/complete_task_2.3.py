@@ -11,10 +11,16 @@
 # Без if не знаю как решить!!!!
 
 def switch_it_up(number):
+    match number:
+        case 1: print('One')
+        case 2: print('Two')
+        case 3: print('Three')
+        case 4: print('Four')
+        case 5: print('Five')
+        case 6: print('Six')
+        case 7: print('Seven')
+        case 8: print('Eight')
+        case 9: print('Nine')
+        case _: print('None')
 
-    
-    if number == 0: print('Zero')
-    if number == 1: print('One')
-    if number == 2: print('Two')
-    
-switch_it_up(0)
+switch_it_up(7)
