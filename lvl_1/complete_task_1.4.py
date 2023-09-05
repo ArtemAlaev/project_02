@@ -32,7 +32,10 @@ store = {
 
 # Решение:
 
-# all_goods = {}                            Пока не знаю как решить
-# if titles.values() is store.keys():
-#     all_goods[titles.keys()] = [store.values()]
-# print(all_goods)
+for item in titles.keys(): 
+    total_price = 0 
+    total_count = 0 
+    for i_list in range(len(store[titles[item]])): 
+        total_price += store[titles[item]][i_list]['quantity'] * store[titles[item]][i_list]['price'] 
+        total_count += store[titles[item]][i_list]['quantity'] 
+    print(f'{item} - {total_count} шт, стоимость {total_price} руб')

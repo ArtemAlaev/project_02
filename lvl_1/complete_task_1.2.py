@@ -68,18 +68,8 @@ print(random.choice(b))
 
 # Решение п. D:
 
-# import datetime
-# # time = '3.03'                    это как пример
-# # min_,sec_ = time.split('.')
-# # song_sec = int(datetime.timedelta(minutes=int(min_),seconds=int(sec_)).total_seconds())
-# # print(song_sec)
-# values = my_favorite_songs_dict.values()
-# valies_list = list(values)
-# print(valies_list)
-# new_valies_list =[]
-# for i in valies_list:
-#     time = i                     тут я запутался
-#     min_, sec_ = time.split('.')
-#     song_sec = int(datetime.timedelta(minutes=int(min_),seconds=int(sec_)).total_seconds())
-#     new_valies_list.append(song_sec)
-# print(new_valies_list)
+import datetime
+
+time_song = my_favorite_songs_dict.get('Easy')
+result = str(datetime.timedelta(minutes=time_song))
+print(result)

@@ -32,8 +32,6 @@ print(remove_last_em(s_2))
 
 # Дополнительно
 
-# Решение: тут я тоже не разобрался как 
-
 # Пункт С.
 # Удалите слова из предложения, если они содержат ровно один восклицательный знак.
 # Слова разделены одним пробелом.
@@ -46,5 +44,9 @@ print(remove_last_em(s_2))
 # remove("Hi! Hi!! Hi!") === "Hi!!"
 # remove("Hi! !Hi! Hi!") === "!Hi!"
 
+# Решение:
+
 def remove_word_with_one_em(s):
-    pass
+    return ' '.join(w for w in s.split() if not list(w).count('!') == 1)
+
+print(remove_word_with_one_em("Hi! !Hi! Hi!"))
